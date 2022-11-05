@@ -1,5 +1,5 @@
 from tests.resources.base_test import BaseTestCase
-from resources.book import Book
+from isaac_martin_sdk.resources.book import Book
 
 
 class TestBook(BaseTestCase):

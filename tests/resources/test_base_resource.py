@@ -1,7 +1,7 @@
-from resources.book import ResourceBase
+from isaac_martin_sdk.resources.book import ResourceBase
 from tests.resources.base_test import BaseTestCase
-from resources.base_resource import _apply_parameters
-from filter import Filter, Operator
+from isaac_martin_sdk.resources.base_resource import _apply_parameters
+from isaac_martin_sdk.filter import Filter, Operator
 
 
 class TestBase(BaseTestCase):

@@ -1,5 +1,5 @@
 from tests.resources.base_test import BaseTestCase
-from resources.quote import Quote
+from isaac_martin_sdk.resources.quote import Quote
 
 
 class TestQuote(BaseTestCase):

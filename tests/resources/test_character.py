@@ -1,6 +1,6 @@
 from tests.resources.base_test import BaseTestCase
-from resources.character import Character
-from filter import Filter, Operator
+from isaac_martin_sdk.resources.character import Character
+from isaac_martin_sdk.filter import Filter, Operator
 class TestCharacter(BaseTestCase):
     def test_list(self):
         characters = Character.list(limit=10)

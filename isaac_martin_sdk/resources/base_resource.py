@@ -1,10 +1,10 @@
 import dataclasses
 from typing import List
 import requests
-import sdk_config
+from isaac_martin_sdk import sdk_config
 from dataclasses_json import dataclass_json
 import json
-from filter import Filter, Operator, operator_lookup
+from isaac_martin_sdk.filter import Filter, Operator, operator_lookup
 
 
 @dataclass_json

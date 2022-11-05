@@ -1,6 +1,6 @@
 from tests.resources.base_test import BaseTestCase
-from resources.movie import Movie
-from filter import Filter, Operator
+from isaac_martin_sdk.resources.movie import Movie
+from isaac_martin_sdk.filter import Filter, Operator
 
 
 class TestMovie(BaseTestCase):

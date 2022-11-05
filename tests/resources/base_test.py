@@ -1,6 +1,7 @@
 import os
 import unittest
-from sdk import TheOneSDK
+from isaac_martin_sdk.sdk import TheOneSDK
+
 
 class BaseTestCase(unittest.TestCase):
     def setUp(self):

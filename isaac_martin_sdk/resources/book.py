@@ -1,10 +1,10 @@
 from __future__ import annotations
-from resources.base_resource import ResourceBase
+from isaac_martin_sdk.resources.base_resource import ResourceBase
 from dataclasses import dataclass
-import sdk_config
+from isaac_martin_sdk import sdk_config
 from typing import List
-from filter import Filter
-from resources.chapter import Chapter
+from isaac_martin_sdk.filter import Filter
+from isaac_martin_sdk.resources.chapter import Chapter
 
 
 @dataclass

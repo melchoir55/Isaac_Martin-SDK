@@ -1,4 +1,4 @@
-from resources.base_resource import ResourceBase
+from isaac_martin_sdk.resources.base_resource import ResourceBase
 from dataclasses import dataclass
 
 

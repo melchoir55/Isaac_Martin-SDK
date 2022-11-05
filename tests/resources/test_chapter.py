@@ -1,5 +1,5 @@
 from tests.resources.base_test import BaseTestCase
-from resources.chapter import Chapter
+from isaac_martin_sdk.resources.chapter import Chapter
 
 
 class TestChapter(BaseTestCase):
