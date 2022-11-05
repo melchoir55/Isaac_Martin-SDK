@@ -114,3 +114,17 @@ A unit test suite can be found in `/tests`.
 This suite implements unittest, the test runner from the standard library. 
 Make sure to set the environment variable `API_TOKEN` as some of these tests contact the remote api.
 You can get a token here: https://the-one-api.dev/
+
+1. Use virtualenv, or poetry to install requirements.
+For example
+```shell
+virtualenv -p python3 venv
+source venv/bin/activate
+pip install -r requirements
+```
+
+2. In the context of your venv, execute the tests
+
+```shell
+API_TOKEN=<your one api token> poetry run pytest
+```
