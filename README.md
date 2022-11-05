@@ -77,6 +77,15 @@ from isaac_martin_sdk.resources.movie import Movie
 movies = Movie.list()
 ```
 
+#### You only need to instantiate the SDK once. After that, you're good to go
+```python
+from isaac_martin_sdk.sdk import TheOneSDK
+import os
+
+token = os.environ['TOKEN']  # An authentication token obtained here: https://the-one-api.dev/
+TheOneSDK(authentication_token=token)
+```
+
 #### Apply filters and other response modifiers as desired
 ```python
 from isaac_martin_sdk.resources.character import Character

@@ -6,6 +6,11 @@ from dataclasses_json import dataclass_json
 import json
 from isaac_martin_sdk.filter import Filter, Operator, operator_lookup
 
+class SDKNotImplemented(Exception):
+    pass
+
+class AuthTokenNotProvided(Exception):
+    pass
 
 @dataclass_json
 @dataclasses.dataclass
@@ -34,10 +39,14 @@ class ResourceBase:
 
     @staticmethod
     def _build_auth_header():
+        if not sdk_config.AUTHENTICATION_TOKEN:
+            raise AuthTokenNotProvided('You need an auth token. Make sure you have implemented the sdk (sdk.TheOneSDK) and provided an auth token')
         return {'Authorization': f'Bearer {sdk_config.AUTHENTICATION_TOKEN}'}
 
     @classmethod
     def make_request(cls, full_path:str):
+        if full_path.startswith('None'):
+            raise SDKNotImplemented('Make sure you have implemented the sdk (sdk.TheOneSDK)')
         if cls.requires_auth():
             response = requests.get(full_path, headers=cls._default_headers | cls._build_auth_header())
         else:

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Isaac_Martin-SDK"
-version = "0.1.1"
+version = "0.1.3"
 description = ""
 authors = ["Isaac Martin <isaac.gregory.martin@gmail.com>"]
 
