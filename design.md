@@ -2,7 +2,7 @@
 
 Priority is always given to user experience. 
 
-* We want intellij to be as effective as possible. 
+* We want intellisense to be as effective as possible. This means hardcoding a lot.
 * We want the user to only have to instantiate objects intuitively. That is, objects they are working with.
 * We want the user to have to perform as little configuration and passing of objects as possible.
 

@@ -1,4 +1,3 @@
-from __future__ import annotations
 from resources.base_resource import ResourceBase
 from dataclasses import dataclass
 import sdk_config
@@ -8,15 +7,18 @@ from resources.quote import Quote
 
 
 @dataclass
-class Movie(ResourceBase):
+class Character(ResourceBase):
     _id: str
+    height: str
+    race: str
+    gender: str
+    birth: str
+    spouse: str
+    death: str
+    realm: str
+    hair: str
     name: str
-    runtimeInMinutes: int
-    budgetInMillions: int
-    boxOfficeRevenueInMillions: int
-    academyAwardNominations: int
-    academyAwardWins: int
-    rottenTomatoesScore: int
+    wikiUrl: str
 
     @staticmethod
     def get_endpoint():
@@ -24,11 +26,11 @@ class Movie(ResourceBase):
         Override the superclass method to return this class's specific endpoint.
         :return:
         '''
-        return '/movie'
+        return '/character'
 
     @classmethod
     def quotes(cls,
-               movie_id: str,
+               character_id: str,
                limit: int = None,
                page: int = None,
                offset: int = None,
@@ -36,7 +38,7 @@ class Movie(ResourceBase):
                filters: List[Filter] = []
                ) -> List[Quote]:
         '''
-        :param movie_id: The identifier of the entity. Normally "_id" in the API response.
+        :param character_id: The identifier of the entity. Normally "_id" in the API response.
         :param limit: Limit the number of responses to your specified int.
         :param page: Select which page of responses you wish to return. Usually used in
         conjunction with `limit`
@@ -45,7 +47,7 @@ class Movie(ResourceBase):
         :param filters: Filters modify the response according to the configuration of the filter.
         :return: A list of quotes, retrieved from the remote api.
         '''
-        full_path = f'{sdk_config.API_URL}{cls.get_endpoint()}/{movie_id}/quote'
+        full_path = f'{sdk_config.API_URL}{cls.get_endpoint()}/{character_id}/quote'
         processed_response = Quote._build_url_and_make_request(full_path=full_path,
                                                                limit=limit,
                                                                page=page,

@@ -1,13 +1,12 @@
+from __future__ import annotations
 from resources.base_resource import ResourceBase
 from dataclasses import dataclass
 
 
 @dataclass
-class Quote(ResourceBase):
+class Chapter(ResourceBase):
     _id: str
-    dialog: str
-    movie: str
-    character: str
+    chapterName: str
 
     @staticmethod
     def get_endpoint():
@@ -15,4 +14,4 @@ class Quote(ResourceBase):
         Override the superclass method to return this class's specific endpoint.
         :return:
         '''
-        return '/quote'
+        return '/chapter'
